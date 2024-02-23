@@ -22,6 +22,12 @@ public class StudentController {
         return studentService.save(student);
     }
 
+    @DeleteMapping("/delete/{studentId}")
+    public ResponseEntity<Void> delete(@PathVariable Student studentId) {
+        studentService.delete(studentId);
+        return ResponseEntity.ok().build();
+    }
+
     @GetMapping("/all")
     public ResponseEntity<List<Student>> getAll(){
         return ResponseEntity.ok(studentService.findAll());

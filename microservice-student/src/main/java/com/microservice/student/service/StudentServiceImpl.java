@@ -27,6 +27,11 @@ public class StudentServiceImpl implements IStudentService{
     }
 
     @Override
+    public void delete(Student student) {
+        studentRepository.delete(student);
+    }
+
+    @Override
     public List<Student> findByIdCourse(Long isCourse) {
         return studentRepository.findByStudent(isCourse);
     }

@@ -12,5 +12,7 @@ public interface IStudentService {
 
     Student save(Student student);
 
+    void delete(Student student);
+
     List<Student> findByIdCourse(Long idCourse);
 }
